@@ -1,0 +1,194 @@
+@mixin dropDownAnim($duration: 0.3s) {
+  animation-name: drop;
+  animation-duration: $duration;
+  transform-origin: top;
+}
+
+// Header
+.header-camp {
+  z-index: 999;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  min-height: 100px;
+  padding: 10px 0px;
+  position: sticky;
+  background: #161620;
+  @include media("<=tablet") {
+    padding: 20px 0px;
+  }
+  .wrap {
+    @include media("<=phoneH") {
+      // flex-direction: column;
+    }
+    .left {
+      flex: 0.5;
+      @include media("<=phoneH") {
+        flex: 1;
+      }
+      .logo-img {
+        height: 72px;
+      }
+    }
+    .right {
+      flex: 1;
+      @include media("<=phoneH") {
+        width: 100%;
+      }
+      .desktop-menu {
+        @include media("<=phoneH") {
+          display: none;
+        }
+      }
+      .action {
+        overflow: auto;
+        overflow: hidden;
+        @include media("<=phoneH") {
+          flex-direction: column;
+          width: 100%;
+          padding: 0px 6px;
+        }
+        .btn {
+          border-radius: 10px;
+          padding: 12px 20px;
+          font-family: "Inter";
+          font-style: normal;
+          font-weight: 700;
+          font-size: 14px;
+          line-height: 17px;
+          color: #000000;
+          margin-left: 30px;
+          width: 160px;
+          background: #23222c;
+          color: #ffffff;
+          &:last-child {
+            color: #000000;
+            background: $themeColor;
+          }
+          @include media("<=phoneH") {
+            margin-left: 12px;
+            margin-right: 12px;
+            margin-top: 10px;
+            width: 100%;
+
+            border-bottom: 2px solid #ffffff;
+          }
+        }
+        .btn2 {
+          border-radius: 10px;
+          padding: 12px 20px;
+          font-family: "Inter";
+          font-style: normal;
+          font-weight: 700;
+          font-size: 14px;
+          line-height: 17px;
+          color: #000000;
+          margin-left: 30px;
+          width: 160px;
+
+          @include media("<=phoneH") {
+            margin-left: 12px;
+            margin-right: 12px;
+            margin-top: 10px;
+            width: 100%;
+            border-bottom: 2px solid #ffffff;
+          }
+        }
+        .wallet-list {
+          width: 200px;
+          position: absolute;
+          top: 85px;
+          right: 80px;
+          padding: 10px 0;
+          background: #161621;
+          box-shadow: 0px 0px 52px -30px rgba(0, 0, 0, 0.25);
+          border-radius: 8px;
+          &.show {
+            @include dropDownAnim;
+          }
+          @include media("<=phoneH") {
+            top: 185px;
+          }
+          .tag {
+            padding: 6px 10px;
+            color: #818181;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 29px;
+            cursor: pointer;
+            @include anim;
+            &:last-child {
+              border-bottom: none;
+            }
+            &:hover {
+              background: #23222d;
+              color: #ffffff;
+            }
+            .img {
+              height: 30px;
+              width: 30px;
+              border-radius: 50%;
+            }
+            .lbl {
+              font-family: "Inter";
+              font-style: normal;
+              font-weight: 400;
+              font-size: 14px;
+              line-height: 17px;
+              color: #ffffff;
+              margin-left: 18px;
+            }
+          }
+        }
+      }
+      .menu-icon {
+        display: none;
+        @include media("<=phoneH") {
+          display: flex;
+        }
+      }
+      .menu-list {
+        background: #fff;
+        width: 180px;
+        position: absolute;
+        top: 85px;
+        right: 30px;
+        padding: 10px 0;
+        background: #ffffff;
+        box-shadow: 0px 0px 52px -30px rgba(0, 0, 0, 0.25);
+        border-radius: 8px;
+        &.show {
+          @include dropDownAnim;
+        }
+        display: none;
+        @include media("<=phoneH") {
+          display: flex;
+        }
+        .tag {
+          padding: 6px 10px;
+          color: #818181;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 29px;
+          cursor: pointer;
+          border-bottom: 0.5px solid #eee;
+          @include anim;
+          svg {
+            margin-right: 10px;
+            width: 18px;
+            height: 18px;
+          }
+          &:last-child {
+            // opacity: 0.03;
+            border-bottom: none;
+          }
+          &:hover {
+            background: $themeColor;
+            color: #ffffff;
+          }
+        }
+      }
+    }
+  }
+}

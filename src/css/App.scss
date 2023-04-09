@@ -1,0 +1,215 @@
+@import "./Colors.scss";
+@import "./Props.scss";
+@import "./media.scss";
+@import "../components/SearchBox/seachbox.scss";
+@import "../components/Header/header.scss";
+@import "../components/Footer/footer.scss";
+@import "../Pages/Home/home.scss";
+@import "../components/ConnectWallet.js/connectwallet.scss";
+
+.font,
+body {
+  font-family: "Inter", sans-serif;
+}
+
+@mixin bgImage($radius: 50%) {
+  height: 100%;
+  width: 100%;
+  border-radius: $radius;
+  background-color: #e2e2e2;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  background-position: center !important;
+}
+
+@mixin dropDownAnim($duration: 0.3s) {
+  animation-name: drop;
+  animation-duration: $duration;
+  transform-origin: top;
+}
+
+@keyframes drop {
+  0% {
+    transform: scaleY(0.5);
+    opacity: 0;
+  }
+}
+
+.wrapWidth {
+  width: 1350px;
+  margin: 0 auto;
+  @include media("<=xlarge") {
+    width: 1280px;
+    margin: 0 auto;
+  }
+  @include media("<=large") {
+    width: 100%;
+    padding: 0px 3%;
+  }
+  @include media("<=desktop") {
+    width: 100%;
+    padding: 0px 3%;
+  }
+  @include media("<=tablet") {
+    width: 100%;
+    padding: 0px 3%;
+  }
+  @include media(">=phone", "<=480px") {
+    padding: 0px 5%;
+  }
+}
+
+.overlay-bg {
+  background: rgba(11, 17, 36, 0.7);
+  // background: rgba(0, 0, 0, 0.7);
+  inset: 0;
+  z-index: 1;
+}
+
+.overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 0;
+  inset: 0;
+  // min-height: 730px;
+}
+
+.bg-img {
+  z-index: 0;
+  width: 100%;
+  object-fit: cover;
+  background-color: #0b1124;
+}
+
+.App {
+  min-height: 100vh;
+  background: #23222c;
+}
+
+// Side Bar
+.sidebar-s {
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 99999;
+  height: 100%;
+  inset: 0;
+  overflow: hidden;
+  .side-block {
+    width: 280px;
+    background-color: $themeColor;
+    height: 100%;
+    overflow-y: auto;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    transition: all 0.3s cubic-bezier(0.9, 0.32, 0.46, 1.18) 0s;
+    &::-webkit-scrollbar {
+      width: 5px;
+    }
+    @include media(">=phone", "<=480px") {
+      width: 70%;
+    }
+    &.show {
+      left: 0;
+      .body {
+        overflow-y: hidden;
+      }
+    }
+    &.hide {
+      left: -450px;
+    }
+    .hdr {
+      padding: 14px;
+      width: 100%;
+      background-color: $themeColor;
+      border-bottom: 1.4px solid #ffffff;
+      .hdr-tag {
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 50px;
+        text-align: center;
+        text-transform: capitalize;
+        color: #ffffff;
+      }
+      .icon-close {
+        height: 20px;
+        cursor: pointer;
+        svg {
+          height: 30px;
+          width: 30px;
+          path {
+            stroke: #fff;
+            fill: #fff;
+          }
+        }
+      }
+    }
+    .items {
+      padding: 20px 16px;
+      .list-item {
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 14px;
+        padding: 8px 0;
+        border-radius: 4px;
+        svg {
+          height: 18px;
+          width: 18px;
+          path {
+            fill: #fff;
+          }
+        }
+        .li {
+          width: 70%;
+          cursor: pointer;
+          font-size: 16px;
+          font-weight: 500;
+          margin-right: 30px;
+          align-items: start;
+          @include anim;
+          @include media("<=desktop") {
+            font-size: 15px;
+            margin-right: 28px;
+            text-align: start;
+          }
+          @include media("<=tablet") {
+            display: flex;
+            // padding-bottom: 10px;
+            // margin-bottom: 24px;
+          }
+        }
+        &.active {
+          background: #ffffff;
+          svg {
+            path {
+              fill: #5c5c5c;
+            }
+          }
+          .li {
+            color: #5c5c5c;
+          }
+        }
+      }
+    }
+    .sidebar-footer {
+      padding: 14px;
+      width: 100%;
+      // border-bottom: 1.4px solid #ffffff;
+      .action {
+        .btn {
+          padding: 8px 18px;
+          background: #f1f1f1;
+          border-radius: 30px;
+          .btn-lbl {
+            margin-left: 8px;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 19px;
+            color: #000000;
+          }
+        }
+      }
+    }
+  }
+}

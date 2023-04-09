@@ -1,0 +1,36 @@
+// Footer
+.footer-comp {
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  min-height: 100px;
+  padding: 10px 0px;
+  background: #161620;
+  @include media("<=phoneH") {
+    padding: 20px;
+  }
+  .wrap {
+    @include media("<=phoneH") {
+      flex-direction: column;
+    }
+    .desc {
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 17px;
+      color: #ffffff;
+    }
+    .left {
+    }
+    .center {
+      flex: 1;
+      @include media("<=phoneH") {
+        margin: 12px 0;
+      }
+    }
+    .right {
+    }
+  }
+}

@@ -1,0 +1,40 @@
+.search-box {
+  .warp {
+    .left-side {
+      width: 360px;
+      background: #23222c;
+      border-radius: 10px 0px 0px 10px;
+      padding: 11px 16px;
+      gap: 10px;
+      @include media("<=tablet") {
+        width: 100%;
+      }
+      .icon {
+      }
+      .txt {
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 15px;
+        color: #686868;
+      }
+    }
+    .right-side {
+      padding: 14px;
+      gap: 10px;
+      background: #23222c;
+      border-left: 1px solid #000000;
+      border-radius: 0px 10px 10px 0px;
+      cursor: pointer;
+      .btn-lbl {
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 17px;
+        color: #ffffff;
+      }
+    }
+  }
+}

@@ -1,0 +1,194 @@
+.card-detail {
+  width: 380px;
+  min-height: 400px;
+  background: linear-gradient(180deg, #161621 19.83%, #1c2d27 99.15%);
+  border-radius: 10px;
+  padding: 12px;
+  border: 1px solid #ffe600;
+  .card-wrapper {
+    width: 100%;
+    .card-hdr {
+      .btn-back {
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        color: #ffffff;
+        cursor: pointer;
+      }
+    }
+    .meta {
+      padding: 60px 20px;
+      .status-sec {
+        .lbl {
+          font-family: "Inter";
+          font-style: normal;
+          font-weight: 700;
+          font-size: 16px;
+          line-height: 19px;
+          color: #ffffff;
+        }
+      }
+      .card-boxes {
+        flex: 1;
+        align-items: start;
+        .inner-box {
+          height: 100px;
+          position: relative;
+          width: 210px;
+          align-items: center;
+          justify-content: center;
+          display: flex;
+          flex-direction: column;
+          .circle-branches {
+            .circle {
+              height: 50px;
+              width: 50px;
+              border: 1px solid #ffffff;
+              border-radius: 50%;
+            }
+            .line1 {
+              height: 34px;
+              border-left: 1px dashed #ffffff;
+              transform: rotate(228deg);
+              position: absolute;
+              bottom: -10px;
+              left: -12px;
+            }
+            .line2 {
+              height: 36px;
+              border-left: 1px dashed #ffffff;
+              transform: rotate(200deg);
+              position: absolute;
+              bottom: -35px;
+              left: 10px;
+            }
+            .line3 {
+              height: 36px;
+              border-left: 1px dashed #ffffff;
+              transform: rotate(-200deg);
+              position: absolute;
+              bottom: -35px;
+              right: 10px;
+            }
+            .line4 {
+              height: 34px;
+              border-left: 1px dashed #ffffff;
+              transform: rotate(308deg);
+              position: absolute;
+              bottom: -10px;
+              right: -12px;
+            }
+          }
+          .small-boxes {
+            width: 100%;
+            .s-box {
+              height: 34px;
+              width: 34px;
+              border: 1px solid #ffffff;
+              border-radius: 50%;
+              position: absolute;
+
+              &:first-child {
+                left: 32px;
+                bottom: -35px;
+              }
+              &:nth-child(2) {
+                left: 72px;
+                bottom: -68px;
+              }
+              &:nth-child(3) {
+                bottom: -66px;
+                left: 121px;
+              }
+              &:nth-child(4) {
+                bottom: -32px;
+                right: 30px;
+              }
+            }
+          }
+        }
+      }
+      .info-sec {
+        margin-top: 100px;
+        .info-item {
+          .lbl {
+            margin-bottom: 6px;
+            font-family: "Inter";
+            font-style: normal;
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 19px;
+            color: #ffffff;
+          }
+          .val {
+            font-family: "Inter";
+            font-style: normal;
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 17px;
+            color: #ffffff;
+          }
+        }
+      }
+      .profit-sec {
+        margin: 20px 0;
+        .info-item {
+          .lbl {
+            margin-bottom: 6px;
+            font-family: "Inter";
+            font-style: normal;
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 19px;
+            color: #ffffff;
+          }
+          .val {
+            font-family: "Inter";
+            font-style: normal;
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 17px;
+            color: #ffffff;
+          }
+        }
+      }
+      .revenue-sec {
+        .info-item {
+          .lbl {
+            margin-bottom: 6px;
+            font-family: "Inter";
+            font-style: normal;
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 19px;
+            color: #ffffff;
+          }
+          .val {
+            font-family: "Inter";
+            font-style: normal;
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 17px;
+            color: #ffffff;
+          }
+        }
+      }
+      .action {
+        margin-top: 40px;
+        .btn {
+          cursor: pointer;
+          padding: 8px;
+          font-family: "Inter";
+          font-style: normal;
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 15px;
+          color: #ffffff;
+          border-bottom: 2px solid #ffe600;
+        }
+      }
+    }
+  }
+}
